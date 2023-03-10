@@ -15,8 +15,8 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1678346796141_1370';
 
-  // add your middleware config here
-  config.middleware = ['errorHandler'];
+  // add your middleware config here 此处需要预留空格，否则不生效
+  config.middleware = [ 'errorHandler' ];
 
   config.mongoose = {
     url: 'mongodb://127.0.0.1/moko_tally',
@@ -25,7 +25,17 @@ module.exports = appInfo => {
     plugins: [],
   };
 
+  // 跨域
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
+  };
 
+  config.security = {
+    csrf: {
+      enable: false
+    }
+  };
 
   // add your user config here
   const userConfig = {

@@ -5,6 +5,7 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/', controller.home.index);
+  router.prefix('/api/v1') // 设置基础路由
+  router.post('/user/login', controller.user.login)
   router.get('/user', controller.user.index);
 };

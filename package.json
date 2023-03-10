@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "egg": "^3",
+    "egg-cors": "^2.2.3",
     "egg-mongoose": "^3.3.1",
-    "egg-scripts": "^2"
+    "egg-scripts": "^2",
+    "egg-security": "^2.11.0"
   },
   "devDependencies": {
     "egg-bin": "^5",

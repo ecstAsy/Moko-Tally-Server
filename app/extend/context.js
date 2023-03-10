@@ -1,15 +1,14 @@
 /*
  * @Author: ecstAsy
  * @Date: 2023-03-09 17:01:32
- * @LastEditTime: 2023-03-09 17:08:32
+ * @LastEditTime: 2023-03-10 17:58:15
  * @LastEditors: ecstAsy
  */
 
 module.exports = {
-  returnBody (status = true, body = {}, msg = 'success', code = 200) {
-    this.status = code;
+  returnBody (body, msg = 'success', code = 0) {
+    this.status = 200;
     this.body = {
-      status: status,
       data: body,
       message: msg,
       code: code
